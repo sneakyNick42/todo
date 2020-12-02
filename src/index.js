@@ -1,17 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+// const el = <h1>Hello</h1>; // JSX === ReactDOM.createElement('h1', null, 'Hello');
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const TodoList = () => { // components must start with capital letter
+    return (
+        <ul>
+            <li>Learn</li>
+            <li>Build</li>
+        </ul>
+    )
+};
+
+const AppHeader = () => {
+    return <h1>My Todo list</h1>
+};
+
+const SearchPanel = () => {
+    return <input type="text" placeholder='search'/>
+};
+
+const App = () => {
+    return (
+        <div>
+            <AppHeader/>
+            <SearchPanel/>
+            <TodoList/>
+        </div>
+    )
+};
+
+ReactDOM.render(<App/>, // React element, not React component. `App` won't work. <App/> Will work.
+    document.getElementById('root'));
