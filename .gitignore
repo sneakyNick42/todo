@@ -30,3 +30,4 @@ yarn-error.log*
 /.idea/modules.xml
 /.idea/todo.iml
 /.idea/vcs.xml
+/.idea/jsLibraryMappings.xml
